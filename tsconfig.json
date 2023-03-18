@@ -4,13 +4,11 @@
 
     /* Basic Options */
     "target": "esnext", 
-    "module": "esnext", 
-    "allowJs": true,
-    "checkJs": true,
+    "module": "esnext",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "./lib",
     "rootDir": "./source",
 
     /* Strict Type-Checking Options */

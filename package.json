@@ -4,7 +4,7 @@
   "description": "Unofficial Codewars API v1 wrapper for Node.js",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha ./dist/lib/rest.spec.js",
+    "test": "mocha ./lib/**/**.spec.js",
     "fix": "eslint --fix --ext .ts,.json ./source"
   },
   "keywords": [

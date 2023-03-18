@@ -1,3 +1,4 @@
-source/**/**.spec.ts
+source/**/**.spec.**
+lib/**/**.spec.**
 .gitignore
 .eslintrc.json

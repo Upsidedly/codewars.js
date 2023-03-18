@@ -1,6 +1,6 @@
 {
   "name": "codewars.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Unofficial Codewars API v1 wrapper for Node.js",
   "main": "lib/index.js",
   "scripts": {

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <link rel="icon" type="image/x-icon" href="_media/wink.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      window.$docsify = {
+        name: "codewars.js",
+        repo: "https://github.com/Upsidedly/codewars.js",
+        loadSidebar: true,
+        alias: {
+          "/.*/sidebar.md": "/_sidebar.md",
+        },
+        subMaxLevel: 2,
+        loadNavbar: true,
+        mergeNavbar: true,
+        auto2top: true,
+        plugins: [
+          function (hook, vm) {
+            // parse twemoji
+            hook.doneEach(function () {
+              twemoji.parse(document);
+            });
+          },
+        ],
+      };
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+    <!-- Emoji -->
+    <script src="//cdn.jsdelivr.net/gh/TaQini/docsify-twemoji@master/twemoji.min.js"></script>
+
+    <!-- Image Zoom Plugin -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+
+    <!-- Pagination Plugin -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+    <!-- Copy 2 Clipboard -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+
+    <!-- External Script -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+
+    <!-- Themeable -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+
+    <!-- Tabs -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+
+    <!-- Search -->
+    <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+
+    <!-- PDFObject && PDF Render -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>
+    <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
+
+    <!-- Select -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-select@1"></script>
+
+    <!-- Alerts -->
+    <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+
+    <!-- Material -->
+    <script src="//unpkg.com/docsify-material-icons/dist/docsify-material-icons.min.js"></script>
+  </body>
+</html>

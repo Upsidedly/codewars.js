@@ -2,3 +2,4 @@ source/**/**.spec.**
 lib/**/**.spec.**
 .gitignore
 .eslintrc.json
+docs/

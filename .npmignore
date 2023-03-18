@@ -1,0 +1,3 @@
+source/**/**.spec.ts
+.gitignore
+.eslintrc.json

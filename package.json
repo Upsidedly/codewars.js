@@ -1,0 +1,38 @@
+{
+  "name": "codewars.js",
+  "version": "0.0.0",
+  "description": "Unofficial Codewars API v1 wrapper for Node.js",
+  "main": "lib/source/index.js",
+  "scripts": {
+    "test": "mocha ./dist/lib/rest.spec.js",
+    "fix": "eslint --fix --ext .ts,.json ./source"
+  },
+  "keywords": [
+    "codewars",
+    "api",
+    "client"
+  ],
+  "author": "upsided",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "@upsided/helpers": "^1.1.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "mocha": "^10.2.0",
+    "typescript": "5.1.0-dev.20230313"
+  },
+  "dependencies": {
+    "codewars-api-types": "^1.0.3",
+    "undici": "^5.21.0",
+    "zod": "^3.21.4"
+  },
+  "type": "module"
+}

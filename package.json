@@ -9,7 +9,8 @@
     },
     "scripts": {
         "test": "mocha ./lib/**/**.spec.js",
-        "fix": "eslint --fix --ext .ts,.json ./source"
+        "fix": "eslint --fix --ext .ts,.json ./source",
+        "pub": "test && np --yolo"
     },
     "keywords": [
         "codewars",

@@ -39,15 +39,15 @@ export class REST {
             throw new TypeError('page must a positive integer!')
         }
 
-        return (await this.request(`/users/${user}/code-challenges/completed?page=${page}`)) as CompletedChallenges
+        return (await this.request(`/users/${encodeURIComponent(user)}/code-challenges/completed?page=${page}`)) as CompletedChallenges
     }
 
     public async authoredChallenges (user: string): Promise<AuthoredChallenge[]> {
-        return ((await this.request(`/users/${user}/code-challenges/authored`)) as AuthoredChallenges).data
+        return ((await this.request(`/users/${encodeURIComponent(user)}/code-challenges/authored`)) as AuthoredChallenges).data
     }
 
     public async codeChallenge (challenge: string): Promise<CodeChallenge> {
-        return (await this.request(`/code-challenges/${challenge}`)) as CodeChallenge
+        return (await this.request(`/code-challenges/${encodeURIComponent(challenge)}`)) as CodeChallenge
     }
 
     /**

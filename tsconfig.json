@@ -8,9 +8,13 @@
     "skipLibCheck": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
+    "rootDir": "src",
     "allowJs": true,
-    "noEmit": true,
     "outDir": "dist",
+    "declaration": true,
+    "sourceMap": true,
     "resolveJsonModule": true,
-  }
+  },
+  "include": ["src"],
+  "exclude": ["src/**/**.spec.ts"]
 }

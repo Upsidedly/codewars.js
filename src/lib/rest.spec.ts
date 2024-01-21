@@ -1,6 +1,6 @@
 import { expect, describe, it } from 'bun:test'
 import { z } from 'zod'
-import { REST } from '../src'
+import { REST } from '..'
 
 export const rankObjectSchema = z.object({
     name: z.string(),
@@ -60,6 +60,8 @@ export const authoredChallengesSchema = z.object({
     data: z.array(authoredChallengeSchema)
 })
 
+export const authoredChallengeArray = z.array(authoredChallengeSchema)
+
 export const codeChallengeSchema = z.object({
     id: z.string(),
     name: z.string(),
@@ -106,7 +108,7 @@ describe('REST v1', () => {
 
     describe('authoredChallenges', () => {
         it('should match zod schema validation of a authored Challenges JSON', async () => {
-            expect(authoredChallengesSchema.safeParse(await rest.authoredChallenges('Upsided')).success).toBe(true)
+            expect(authoredChallengeArray.safeParse(await rest.authoredChallenges('Upsided')).success).toBe(true)
         })
     })
 

@@ -1,8 +1,8 @@
 {
   "name": "codewars.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Unofficial Codewars API v1 wrapper for Node.js",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Upsidedly/codewars.js/tree/master.git"
@@ -11,9 +11,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "bun run build.mjs",
+    "build": "bun tsc",
     "lint": "eslint --ext .ts,.json ./src",
-    "prepublishOnly": "bun run build"
+    "prepublishOnly": "bun run build && bun lint"
   },
   "keywords": [
     "codewars",
@@ -23,12 +23,14 @@
   "author": "upsided",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
+    "@types/bun": "^1.0.3",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
     "bun-plugin-dts": "^0.2.1",
     "eslint": "^8.56.0",
     "eslint-config-neon": "^0.1.57",
-    "typescript": "5.1.0-dev.20230313",
-    "zod": "^3.21.4",
-    "@types/bun": "^1.0.3"
+    "typescript": "^5.3.3",
+    "zod": "^3.21.4"
   },
   "dependencies": {
     "codewars-api-types": "^1.1.3"

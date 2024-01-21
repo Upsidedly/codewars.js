@@ -7,7 +7,7 @@ module.exports = {
 		sourceType: 'module',
 		project: ['tsconfig.json']
 	},
-    ignorePatterns: ['.eslintrc.cjs', 'ecosystem.config.cjs', 'dist/**/**.js'],
+    ignorePatterns: ['.eslintrc.cjs', 'ecosystem.config.cjs', 'dist/**/**.js', 'src/**/**.spec.ts'],
     root: true,
 	rules: {
 		"@typescript-eslint/consistent-type-definitions": "off"

@@ -52,8 +52,9 @@ export class REST {
 
     /**
      * Retrieves members of a clan of a certain page
-     * @param clanName The name of the clan
-     * @param page The page number to retrieve 
+     *
+     * @param clanName - The name of the clan
+     * @param page - The page number to retrieve 
      */
     public async clanMembers(clanName: string, page: number): Promise<ClanMembers> {
         if (!(Number.isInteger(page) && page > -1)) {
@@ -65,7 +66,8 @@ export class REST {
 
     /**
      * Retrieves every member of a clan
-     * @param clanName The name of the clan
+     *
+     * @param clanName - The name of the clan
      * @returns Every member of the clan, of each page
      */
     public async clanMembersAll(clanName: string): Promise<User[]> {
@@ -76,8 +78,9 @@ export class REST {
             data.push(...members.data)
             if (page === members.totalPages - 1) return
             page++
-            get()
+            await get()
         }
+
         return data
     }
 }

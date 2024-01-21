@@ -1,6 +1,6 @@
-import { REST } from './rest.js'
-import { expect } from 'chai'
+import { expect, describe, it } from 'bun:test'
 import { z } from 'zod'
+import { REST } from '../src'
 
 export const rankObjectSchema = z.object({
     name: z.string(),
@@ -94,25 +94,25 @@ describe('REST v1', () => {
 
     describe('user', () => {
         it('should match zod schema validation of a user JSON', async () => {
-            expect(userSchema.safeParse(await rest.user('Upsided')).success).to.be.equal(true)
+            expect(userSchema.safeParse(await rest.user('Upsided')).success).toBe(true)
         })
     })
 
     describe('completedChallenges', () => {
         it('should match zod schema validation of a completed Challenges JSON', async () => {
-            expect(completedChallengesSchema.safeParse(await rest.completedChallenges('Upsided', 1)).success).to.be.equal(true)
+            expect(completedChallengesSchema.safeParse(await rest.completedChallenges('Upsided', 1)).success).toBe(true)
         })
     })
 
     describe('authoredChallenges', () => {
         it('should match zod schema validation of a authored Challenges JSON', async () => {
-            expect(authoredChallengesSchema.safeParse(await rest.authoredChallenges('Upsided')).success).to.be.equal(true)
+            expect(authoredChallengesSchema.safeParse(await rest.authoredChallenges('Upsided')).success).toBe(true)
         })
     })
 
     describe('codeChallenge', () => {
         it('should match zod schema validation of a code Challenge JSON', async () => {
-            expect(codeChallengeSchema.safeParse(await rest.codeChallenge('binary-addition')).success).to.be.equal(true)
+            expect(codeChallengeSchema.safeParse(await rest.codeChallenge('binary-addition')).success).toBe(true)
         })
     })
 })

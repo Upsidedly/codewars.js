@@ -1,29 +1,16 @@
 {
   "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig.json to read more about this file */
-
-    /* Basic Options */
-    "target": "esnext", 
+    "target": "es2020",
     "module": "esnext",
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "outDir": "./lib",
-    "rootDir": "./source",
-
-    /* Strict Type-Checking Options */
     "strict": true,
-
-    /* Module Resolution Options */
-    "moduleResolution": "node",
     "esModuleInterop": true,
-
-    /* Experimental Options */
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-
-    /* Advanced Options */
+    "moduleResolution": "node",
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "allowJs": true,
+    "noEmit": true,
+    "outDir": "dist",
+    "resolveJsonModule": true,
   }
 }
